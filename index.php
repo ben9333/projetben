@@ -3,7 +3,7 @@
 <head>
 
 
-<title>Graphe Chart JS</title>
+<title>Graphe Exercice 1</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
@@ -23,9 +23,9 @@
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin'],
+      labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre'],
       datasets: [{
-        label: '# of Votes',
+        label: '# Ventes',
         data: [12, 19, 3, 5, 2, 3],
         borderWidth: 1
       }]
