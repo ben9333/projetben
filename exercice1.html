@@ -1,0 +1,30 @@
+<body>
+  <button id="exercice-1">Exercice 1</button>
+  <script>
+    // Add an event listener to the button
+    document.getElementById("exercice-1").addEventListener("click", function() {
+      
+      // Create a new canvas element for the chart
+      var canvas = document.createElement("canvas");
+      canvas.width = 400; // Set the width and height of the canvas as per your requirement
+      canvas.height = 400;
+      document.body.appendChild(canvas); // Add the canvas to the body of the HTML document
+      
+      // Create the chart object using Chart.js library
+      var chart = new Chart(canvas, {
+        type: 'bar', // Set the type of chart as per your requirement
+        data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'], // Set the x-axis labels
+          datasets: [{
+            label: 'Sales', // Set the label for the data
+            data: [12, 19, 3, 5, 2, 3, 20], // Set the y-axis data values
+            backgroundColor: ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'brown'] // Set the color for the bars in the chart
+          }]
+        },
+        options: {
+          responsive: true
+        }
+      });
+    });
+  </script>
+</body>
