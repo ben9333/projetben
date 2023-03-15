@@ -25,8 +25,8 @@
     data: {
       labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre'],
       datasets: [{
-        label: '# Ventes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: ' Les Ventes Iphone',
+        data: [9, 11, 13, 15, 2, 3],
         borderWidth: 1
       }]
     },
