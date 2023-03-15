@@ -1,30 +1,37 @@
-<body>
-  <button id="exercice-1">Exercice 1</button>
-  <script>
-    // Add an event listener to the button
-    document.getElementById("exercice-1").addEventListener("click", function() {
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mon premier dashboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/mydashboard.js"></script>
+  </head>
+
+  <body>
+  
+    <div class="content">
+      <header>
+        <div class="header-background"></div>
+        <div class="title">
+          <h1>
+            Mon dashboard
+          </h1>
+        </div>
+      </header>
       
-      // Create a new canvas element for the chart
-      var canvas = document.createElement("canvas");
-      canvas.width = 400; // Set the width and height of the canvas as per your requirement
-      canvas.height = 400;
-      document.body.appendChild(canvas); // Add the canvas to the body of the HTML document
-      
-      // Create the chart object using Chart.js library
-      var chart = new Chart(canvas, {
-        type: 'bar', // Set the type of chart as per your requirement
-        data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'], // Set the x-axis labels
-          datasets: [{
-            label: 'Sales', // Set the label for the data
-            data: [12, 19, 3, 5, 2, 3, 20], // Set the y-axis data values
-            backgroundColor: ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'brown'] // Set the color for the bars in the chart
-          }]
-        },
-        options: {
-          responsive: true
-        }
-      });
-    });
-  </script>
-</body>
+      <main>
+        <div class="chartContainer">
+            
+          <div id="actu" class="chart">
+          </div>
+
+          <div id="meteo" class="chart">
+          </div>
+          
+        </div>
+      </main>
+    </div>
+    
+  </body>
+  
+</html>
