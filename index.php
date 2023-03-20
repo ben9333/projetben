@@ -1,45 +1,66 @@
 <html>
-
 <head>
+<style>
+#zonedejeux{background-color:antiquewhite;
+			width:900px; height:400px;
+			position:absolute; top:3px; left:3px;
+			z-index:1;}
+h1{position:absolute;top:-7px; left:320px; z-index:2;}
+</style>
+
+<script>
+//var globale
+var speed = 500;
+
+function principale(){
+	//Ajout d'un écouteur sur les touches
+	window.addEventListener('keydown', deplacement, true);
+	//Lance la fonction bouger() à interval de "speed"
+	enemy = setInterval(bouger, speed);
+	
+}
+
+function bouger(){
+
+	//Code à créer pour faire bouger la boule enemy
+	
+}
 
 
-<title>Graphe Exercice 1</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+function deplacement(evt) {
+		   var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
+		   var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
+           switch (evt.keyCode) {
+                // Gauche 
+                case 37:
+					ballX -= 15;
+                    if(ballX<15){ballX=15;}
+					document.getElementById('ball').setAttribute("cx", ballX);
+					break;
+                // Droite 
+                case 39:
 
 
-</head>
+				// Haut 
+                case 38:
 
 
-
-<body>
-	<div>
-		<canvas id="myChart"></canvas>
-    </div>
+				// Bas 
+                case 40:
 
 
-	<script>
-  const ctx = document.getElementById('myChart');
+            }
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre'],
-      datasets: [{
-        label: ' Les Ventes Iphone',
-        data: [9, 11, 13, 15, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
+}
+
+	 
 </script>
-
-</body>
+</head>
+<body onload="principale()">
+	<h1>Jeux Javascript</h1>
+	<svg id="zonedejeux">
+	<circle cx="450" cy="200" r="15" fill="tomato" id="ball" />
+	
+	</svg>
+<body>
 </html>
-  
